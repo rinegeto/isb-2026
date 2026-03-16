@@ -22,13 +22,10 @@ def runs_test(sequence):
     if abs(pi - 0.5) >= (2.0 / math.sqrt(n)):
         return 0.0
 
-    v_n = 1
-    for i in range(n - 1):
-        if sequence[i] != sequence[i+1]:
-            v_n += 1
+    v_n = sequence.count("01") + sequence.count("10")
 
     numerator = abs(v_n - 2 * n * pi * (1 - pi))
-    denominator = 2 * math.sqrt(2 * n * pi * (1 - pi))
+    denominator = 2 * math.sqrt(2 * n) * pi * (1 - pi)
 
     if denominator == 0:
         return 0.0
