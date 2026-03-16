@@ -22,7 +22,7 @@ def runs_test(sequence):
     if abs(pi - 0.5) >= (2.0 / math.sqrt(n)):
         return 0.0
 
-    v_n = 0
+    v_n = 1
     for i in range(n - 1):
         if sequence[i] != sequence[i+1]:
             v_n += 1
